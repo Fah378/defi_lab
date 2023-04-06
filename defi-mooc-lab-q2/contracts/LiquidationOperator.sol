@@ -276,8 +276,9 @@ contract LiquidationOperator is IUniswapV2Callee {
 
         // Repay 
         uint repay_WBTC = getAmountIn(debt_USDT, reserve_WBTC_Pool1, reserve_USDT_Pool1);
-        console.log("Repay:", repay_WBTC, "WBTC");
-        console.log("Profit:",collateral_WBTC-repay_WBTC, "WBTC");
+        console.log("repay_WBTC:", repay_WBTC, "WBTC");
+        console.log("Profit[WBTC]:",collateral_WBTC-repay_WBTC, "WBTC");
+        console.log("vvvvvvvvvvvvvvvvvv");
         WBTC.transfer(address(uniswapV2Pair_WBTC_USDT), repay_WBTC);
 
         // Transfer WBTC -> WETH
